@@ -49,6 +49,14 @@ function verify() {
   }
 }
 
+function playAlarm() {
+  let audio = new Audio('../audios/alarm-sound-effect.mp3');
+  audio.play();
+  setTimeout(() => {
+    audio.pause()
+  }, 5000)
+}
+
 function run() {
   running = true;
   let { input_hours, input_minutes, input_seconds } = elements();
@@ -63,7 +71,8 @@ function run() {
       input_hours.value = 0;
       input_minutes.value = 0;
       input_seconds.value = 0;
-      running = false;
+      playAlarm()
+      running = false
       return true;
     }
     if (s === 0) {
@@ -84,13 +93,13 @@ function run() {
     input_hours.value = h;
     input_minutes.value = m;
     input_seconds.value = s;
-  }, 100);
+  }, 1000);
 }
 
 function init() {
   if (!running) {
     if (verify()) {
-      run();
+      run()
     } else {
       reset();
       showError('ERROR: enter valids values');
