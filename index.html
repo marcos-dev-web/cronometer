@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+  </head>
+  <body>
+    <div class="alert">
+      <div class="msg">
+        <p class="text">
+          error
+        </p>
+      </div>
+    </div>
+    <div class="counter_box">
+      <div class="counter">
+        <div class="hours box_item">
+          <input
+            type="number"
+            id="hour"
+            class="hour"
+            value="0"
+            min="0"
+            max="60"
+          />
+          <p>HOURS</p>
+        </div>
+
+        <div class="minutes box_item">
+          <input
+            type="number"
+            id="minute"
+            class="minute"
+            value="1"
+            min="0"
+            max="60"
+          />
+          <p>MINUTES</p>
+        </div>
+
+        <div class="seconds box_item">
+          <input
+            type="number"
+            id="second"
+            class="second"
+            value="0"
+            min="0"
+            max="60"
+          />
+          <p>SECONDS</p>
+        </div>
+      </div>
+      <div class="button_start">
+        <button class="start" onclick="init()">Start</button>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

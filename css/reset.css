@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+*::selection {
+  background-color: #3B3B98;
+  color: #FC427B;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #2C3A47;
+  color: #F8EFBA;
+  font-family: Ubuntu, sans-serif;
+}
