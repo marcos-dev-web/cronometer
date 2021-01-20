@@ -50,7 +50,7 @@ function verify() {
 }
 
 function playAlarm() {
-  let audio = new Audio('../audios/alarm-sound-effect.mp3');
+  let audio = new Audio('./audios/alarm-sound-effect.mp3');
   audio.play();
   setTimeout(() => {
     audio.pause()
